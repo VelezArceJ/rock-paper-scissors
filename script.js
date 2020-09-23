@@ -1,8 +1,10 @@
+//create a function that allows the computer to randomly choose between rock, paper, and scissors
 function computerPlay() {
     let compChoice = ["rock", "paper", "scissors"];
     return compChoice[Math.floor(Math.random() * 3)];
 }
 
+//create a function that simulates a round of RPS
 function round(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return "It's a tie!"
@@ -30,6 +32,7 @@ function round(playerSelection, computerSelection) {
     }
 }
 
+//create a function that simulates 5 rounds
 function game() {
     let playerPoints = 0;
     let computerPoints = 0;
