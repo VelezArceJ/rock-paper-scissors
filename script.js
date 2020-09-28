@@ -1,3 +1,63 @@
+const button = document.querySelectorAll("button");
+button.forEach( item => item.addEventListener('click', function() {playRound(item.dataset.key)}));
+let outcome = document.querySelector('#outcome');
+let compChoice = document.querySelector('#comp-choice');
+let playerScore = document.querySelector('#player-score');
+let compScore = document.querySelector('#comp-score');
+let playerPoints = 0;
+let compPoints = 0; 
+
+function playRound(playerSelection) {
+    let computerSelection = computerPlay();
+    console.log(playerSelection);
+    console.log(computerSelection);
+    if (playerSelection === computerSelection) {
+        outcome.innerHTML = "It's a tie!";
+        compChoice.innerHTML = "Computer chose " + computerSelection;
+    }
+    if (playerSelection === "rock") {
+        if (computerSelection === "scissors") {
+            playerPoints++;
+            outcome.innerHTML = "You win this round!";
+            compChoice.innerHTML = "Computer chose " + computerSelection + ".";
+        } else if (computerSelection === "paper") {
+            compPoints++;
+            outcome.innerHTML = "You lose!";
+            compChoice.innerHTML = "Computer chose " + computerSelection + ".";
+        }
+    }
+    if (playerSelection === "paper") {
+        if (computerSelection === "rock") {
+            playerPoints++;
+            outcome.innerHTML = "You win this round!";
+            compChoice.innerHTML = "Computer chose " + computerSelection + ".";
+        } else if (computerSelection === "scissors") {
+            compPoints++;
+            outcome.innerHTML = "You lose!";
+            compChoice.innerHTML = "Computer chose " + computerSelection + ".";
+        }
+    }
+    if (playerSelection === "scissors") {
+        if (computerSelection === "paper") {
+            playerPoints++;
+            outcome.innerHTML = "You win this round!";
+            compChoice.innerHTML = "Computer chose " + computerSelection + ".";
+        } else if (computerSelection === "rock") {
+            compPoints++;
+            outcome.innerHTML = "You lose!";
+            compChoice.innerHTML = "Computer chose " + computerSelection + ".";
+        }
+    }
+    playerScore.innerHTML = playerPoints;
+    compScore.innerHTML = compPoints;
+}
+
+function computerPlay() {
+    let compChoice = ["rock", "paper", "scissors"];
+    return compChoice[Math.floor(Math.random() * 3)];
+}
+
+/*
 //create a function that allows the computer to randomly choose between rock, paper, and scissors
 function computerPlay() {
     let compChoice = ["rock", "paper", "scissors"];
@@ -60,3 +120,4 @@ function game() {
         console.log("Nobody wins.")
     }
 }
+*/

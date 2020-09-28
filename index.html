@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Rock--Paper--Scissors</title>
 </head>
 <body>
-    <h1>WELCOME TO <br> ROCK -- PAPER -- SCISSORS</h1>
-    <h2>For now, play the game in the console. Run the function game</h2>
+    <section>
+        <h1>WELCOME TO <br> ROCK -- PAPER -- SCISSORS <br> CHOOSE YOUR WEAPON!</h1>
+        <article id="weapon-board">
+            <div id="weapon">
+                <button id="weapon-choice" data-key="rock">ROCK</button>
+            </div>
+            <div id="weapon">
+                <button id="weapon-choice" data-key="paper">PAPER</button>
+            </div>
+            <div id="weapon">
+                <button id="weapon-choice" data-key="scissors">SCISSORS</button>
+            </div>
+        </article>
+        <article id="score-board">
+            <p id="comp-choice"></p>
+            <p id="outcome"></p>
+            <p>
+                Player Score
+            </p>
+            <p id="player-score"></p>
+            <p>
+                Computer Score
+            </p>
+            <p id="comp-score"></p>
+        </article>
+    </section>
 </body>

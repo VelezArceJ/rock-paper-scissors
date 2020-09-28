@@ -1,4 +1,47 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: #363636;
+    color: #d4d3d3;
+}
+
+section {
+    border: 3px solid #d4d3d3;
+    margin: auto;
+    margin-top: 10%;
+    width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px auto;
+}
+
+#weapon-board {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#weapon {
+    display: inline-grid;
+}
+
+button {
+    border: 2px solid #d4d3d3;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+#score-board {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
